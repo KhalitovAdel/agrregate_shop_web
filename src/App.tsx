@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import ScopedCssBaseline from '@material-ui/core/ScopedCssBaseline';
+import React from 'react';
+
+import { CrudR } from './CRUD/crud.r';
+
+class App extends React.Component<any, any> {
+    render() {
+        return (
+          <ScopedCssBaseline>
+            <p style={{ width: '100%', backgroundColor: 'red' }}>Lol kek</p>
+            {/* <CrudList method={(arg: any) => Promise.resolve(arg)} /> */}
+            <CrudR />
+            <p style={{ width: '100%', backgroundColor: 'red' }}>Lol kek</p>
+          </ScopedCssBaseline>
+        );
+    }
 }
 
 export default App;
